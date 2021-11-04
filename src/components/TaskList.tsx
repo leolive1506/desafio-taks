@@ -37,7 +37,7 @@ export function TaskList() {
         ...task,
         // redefinie essa propriedade
         isComplete: !task.isComplete
-      } : task
+      } : task // aqui retorna a task se id for diferente
     )
 
     setTasks(newTasks)

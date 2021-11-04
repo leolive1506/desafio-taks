@@ -35,6 +35,7 @@ export function TaskList() {
       task => task.id === id ? {
         // herda as outras propriedades
         ...task,
+        // redefinie essa propriedade
         isComplete: !task.isComplete
       } : task
     )

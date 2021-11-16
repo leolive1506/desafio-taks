@@ -44,8 +44,6 @@ export function TaskList() {
   }
 
   function handleRemoveTask(id: number) {
-    // filter -> filtra e gera um novo array com dados filtrados
-    // usando filter pra retornar todos outros items menos o do id atual
     const filteredTasks = tasks.filter(task => task.id !== id)
 
     setTasks(filteredTasks)

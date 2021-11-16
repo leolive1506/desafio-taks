@@ -16,9 +16,19 @@ const newTasks = tasks.map(
     task => task.id === id ? {
     // herda as outras propriedades
     ...task,
+    // redefinie essa propriedade
     isComplete: !task.isComplete
-    } : task
+    } : task // aqui retorna a task se id for diferente
 )
 
 setTasks(newTasks)
+```
+
+# Fazer deleção em state([]) 
+* filter -> filtra e gera um novo array com dados filtrados
+* Usando filter pra retornar todos outros items menos o do id atual
+```jsx
+const filteredTasks = tasks.filter(task => task.id !== id)
+
+setTasks(filteredTasks)
 ```
